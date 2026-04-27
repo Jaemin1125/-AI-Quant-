@@ -4,4 +4,4 @@ numpy
 matplotlib
 seaborn
 sklearn
-SimpleImputer
+scikit-learn
