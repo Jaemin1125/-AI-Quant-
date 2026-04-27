@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 #데이터 전처리
-data=pd.read_csv('C://Users//user//Documents//drive-download-20260427T041452Z-3-001/OBS_ASOS_MI_20241216173201(1).csv', encoding='cp949')
+data=pd.read_csv('OBS_ASOS_MI_20241216173201(1).csv', encoding='cp949')
 print(data)
 
 data.rename(columns={'기온(°C)': 'Temperature', '일시':'Date'}, inplace=True)
