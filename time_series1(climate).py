@@ -58,7 +58,7 @@ print(f"지속성 검사 후 결측값 수 : {data['Temperature'].isnull().sum()
 #자료 완전성 검사 및 시간별/일별 평균 산출
 completeness_threshold_ratio = 0.8  #80%자료 완전성 임계값
 
-hourly_data = data['Temperature'].resample('h')
+hourly_data = data['Temperature'].resample('H')
 hourly_count = hourly_data.count()
 hourly_expected_count = 60
 hourly_mean = hourly_data.mean()
@@ -68,7 +68,7 @@ print('\n 시간별 평균(일부):')
 print(hourly_mean.head())
 
 #3시간 평균
-three_hourly_data = data['Temperature'].resample('3h')
+three_hourly_data = data['Temperature'].resample('3H')
 three_hourly_count = three_hourly_data.count()
 three_hourly_expected_count = 3*60
 three_hourly_mean = three_hourly_data.mean()
@@ -78,7 +78,7 @@ print('\n 시간별 평균(일부): ')
 print(three_hourly_mean.head())
 
 #일 평균
-daily_data = data['Temperature'].resample('d')
+daily_data = data['Temperature'].resample('D')
 daily_count = daily_data.count()
 daily_expected_count = 24*60
 daily_mean = daily_data.mean()
